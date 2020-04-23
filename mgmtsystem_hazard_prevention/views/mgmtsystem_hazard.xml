@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
             <xpath expr="//page[1]" position="after">
                 <page string="Preventive Measures">
-                    <field name="prevention_measure_ids" domain="[('parent_id','in',('Work Instructions', 'Procedure','Environmental Aspect','Manuals'))]"/>
+                    <field name="prevention_ids" domain="[('parent_id','in',('Work Instructions', 'Procedure','Environmental Aspect','Manuals'))]"/>
                 </page>
             </xpath>
         </field>

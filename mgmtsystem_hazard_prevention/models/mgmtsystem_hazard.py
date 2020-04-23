@@ -7,10 +7,10 @@ from odoo import fields, models
 class MgmtsystemHazard(models.Model):
     _inherit = 'mgmtsystem.hazard'
 
-    prevention_measure_ids = fields.Many2many(
+    prevention_ids = fields.Many2many(
         'document.page',
-        'mgmtsystem_hazard_prevention_measure_rel',
+        'mgmtsystem_hazard_prevention_rel',
         'hazard_id',
-        'prevention_measure_id',
-        'Prevention Measures',
+        'prevention_id',
+        'Preventive Measures',
     )
