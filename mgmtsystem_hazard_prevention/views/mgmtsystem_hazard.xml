@@ -1,0 +1,15 @@
+<odoo>
+
+    <record id="view_mgmtsystem_hazard_form" model="ir.ui.view">
+        <field name="inherit_id" ref="mgmtsystem_hazard.view_mgmtsystem_hazard_form"/>
+        <field name="model">mgmtsystem.hazard</field>
+        <field name="arch" type="xml">
+            <xpath expr="//page[1]" position="after">
+                <page string="Preventive Measures">
+                    <field name="prevention_measure_ids" domain="[('parent_id','in',('Work Instructions', 'Procedure','Environmental Aspect','Manuals'))]"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
